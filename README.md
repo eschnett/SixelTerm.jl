@@ -17,8 +17,11 @@ for one list.
 Here is an example using Plots with the default GR backend:
 
 ```julia
-using SixelTerm
 ENV["GKSwstype"] = "nul"    # needed for the GR backend on headless servers
 using Plots
+using SixelTerm             
 scatter(rand(100))
 ```
+Note that when using it with Plots, you have to do `using SixelTerm` after `using Plots`.
+For some reason, Plots.jl adds its own display to the stack, so we need the SixelTerm
+display added last.
