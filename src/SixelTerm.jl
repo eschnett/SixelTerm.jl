@@ -1,7 +1,7 @@
 module SixelTerm
 
-using ImageMagick
 using FileIO
+using ImageMagick
 
 struct SixelDisplay <: AbstractDisplay end
 

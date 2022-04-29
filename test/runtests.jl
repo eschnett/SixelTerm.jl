@@ -1,3 +1,2 @@
 using Test
 using SixelTerm
-
