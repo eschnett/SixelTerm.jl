@@ -1,6 +1,6 @@
 name = "SixelTerm"
 uuid = "65edfddc-f399-4499-8369-a1bd38eee2ea"
-version = "0.1.0"
+version = "1.0.0"
 
 [deps]
 FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
@@ -8,4 +8,5 @@ ImageMagick = "6218d12a-5da1-5696-b52f-db25d2ecc6d1"
 
 [compat]
 FileIO = "1.4.1"
+ImageMagick = "1.2"
 julia = "1.5"
