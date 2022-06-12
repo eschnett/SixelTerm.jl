@@ -28,7 +28,7 @@ For some reason, Plots.jl adds its own display to the stack, so we need the Sixe
 display added last.
 
 This is how things look in iTerm2:
-<img src="https://raw.githubusercontent.com/carstenbauer/SixelTerm.jl/master/demo.png" width=900px></img>
+<img src="https://raw.githubusercontent.com/eschnett/SixelTerm.jl/master/demo.png" width=900px></img>
 
 This package was written by [Tom Short](https://github.com/tshort) and
 is now maintained by [Erik Schnetter](https://github.com/eschnett).
