@@ -2,6 +2,8 @@
 
 * [![GitHub
   CI](https://github.com/eschnett/SixelTerm.jl/workflows/CI/badge.svg)](https://github.com/eschnett/SixelTerm.jl/actions)
+* [![codecov](https://codecov.io/gh/eschnett/SixelTerm.jl/branch/master/graph/badge.svg?token=6JBYLRAD2X)](https://codecov.io/gh/eschnett/SixelTerm.jl)
+
 
 This is a quick-and-dirty Julia package to display graphics inline on 
 terminals that support [Sixel](https://en.wikipedia.org/wiki/Sixel) graphics. 
@@ -39,4 +41,4 @@ is now maintained by [Erik Schnetter](https://github.com/eschnett).
 [TerminalGraphics](https://github.com/m-j-w/TerminalGraphics.jl) is another package that
 provides similar functionality. The main difference is that TerminalGraphics includes an
 interface to libsixel, and this package relies of ImageMagick for conversion to the Sixel
-format. 
+format.
