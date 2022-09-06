@@ -4,7 +4,6 @@
   CI](https://github.com/eschnett/SixelTerm.jl/workflows/CI/badge.svg)](https://github.com/eschnett/SixelTerm.jl/actions)
 * [![codecov](https://codecov.io/gh/eschnett/SixelTerm.jl/branch/master/graph/badge.svg?token=6JBYLRAD2X)](https://codecov.io/gh/eschnett/SixelTerm.jl)
 
-
 This is a quick-and-dirty Julia package to display graphics inline on 
 terminals that support [Sixel](https://en.wikipedia.org/wiki/Sixel) graphics. 
 This is like [TerminalExtensions](https://github.com/Keno/TerminalExtensions.jl)
