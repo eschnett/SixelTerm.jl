@@ -30,6 +30,9 @@ Note that when using it with Plots, you have to do `using SixelTerm` after `usin
 For some reason, Plots.jl adds its own display to the stack, so we need the SixelTerm
 display added last.
 
+This is how things look in iTerm2:
+<img src="https://raw.githubusercontent.com/eschnett/SixelTerm.jl/master/demo.png" width=900px></img>
+
 This package was written by [Tom Short](https://github.com/tshort) and
 is now maintained by [Erik Schnetter](https://github.com/eschnett).
 
