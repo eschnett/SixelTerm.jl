@@ -9,7 +9,7 @@ function Base.display(d::SixelDisplay, m::MIME{Symbol("image/png")}, x)
     a = repr("image/png", x)
     im = ImageMagick.load_(a)
     io = IOBuffer()
-    s = Stream(format"six", io, "t.six")
+    s = Stream{format"six"}(io, "t.six")
     ImageMagick.save(s, im)
     write(stdout, take!(io))
     return nothing

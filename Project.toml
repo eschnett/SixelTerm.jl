@@ -1,6 +1,6 @@
 name = "SixelTerm"
 uuid = "65edfddc-f399-4499-8369-a1bd38eee2ea"
-version = "1.1.0"
+version = "1.1.1"
 
 [deps]
 FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
