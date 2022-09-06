@@ -39,5 +39,5 @@ is now maintained by [Erik Schnetter](https://github.com/eschnett).
 
 [TerminalGraphics](https://github.com/m-j-w/TerminalGraphics.jl) is another package that
 provides similar functionality. The main difference is that TerminalGraphics includes an
-interface to libsixel, and this package relies of ImageMagick for conversion to the Sixel
+interface to libsixel, while this package relies on ImageMagick for conversion to the Sixel
 format.
