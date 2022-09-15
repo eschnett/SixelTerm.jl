@@ -51,7 +51,7 @@ jobs:
         env:
           PYTHON:
       - run: |
-          julia -e 'using Pkg; Pkg.add(url="https://github.com/eschnett/GridLayoutBase.jl", rev="patch-1")'
+          julia --project=@. -e 'using Pkg; Pkg.add(url="https://github.com/eschnett/GridLayoutBase.jl", rev="patch-1")'
       - uses: julia-actions/julia-runtest@v1
         continue-on-error: ${{matrix.version == 'nightly'}}
       - uses: julia-actions/julia-processcoverage@v1
