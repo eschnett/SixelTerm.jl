@@ -19,6 +19,8 @@ Terminals with Sixel support are available for Windows, Linux, MacOS, and Androi
 See [here](https://github.com/saitoha/libsixel/blob/master/README.md#terminal-requirements)
 for one list.
 
+## Examples
+
 Here is an example using Plots with the default GR backend:
 
 ```julia
@@ -33,6 +35,18 @@ display added last.
 
 This is how things look in iTerm2:
 <img src="https://raw.githubusercontent.com/eschnett/SixelTerm.jl/master/demo.png" width=900px></img>
+
+Here is an example using Makie:
+```julia
+using CairoMakie
+using SixelTerm
+scatter(rand(100))
+```
+
+This is how things look in iTerm2:
+<img src="https://raw.githubusercontent.com/eschnett/SixelTerm.jl/master/demo-makie.png" width=900px></img>
+
+## Acknowledgements
 
 This package was written by [Tom Short](https://github.com/tshort) and
 is now maintained by [Erik Schnetter](https://github.com/eschnett).
