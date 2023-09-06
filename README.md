@@ -25,21 +25,18 @@ Here is an example using Plots with the default GR backend:
 
 ```julia
 ENV["GKSwstype"] = "nul"    # needed for the GR backend on headless servers
-using Plots
 using SixelTerm
+using Plots
 scatter(rand(100))
 ```
-Note that when using it with Plots, you have to do `using SixelTerm` after `using Plots`.
-For some reason, Plots.jl adds its own display to the stack, so we need the SixelTerm
-display added last.
 
 This is how things look in iTerm2:
 <img src="https://raw.githubusercontent.com/eschnett/SixelTerm.jl/master/demo.png" width=900px></img>
 
 Here is an example using Makie:
 ```julia
-using CairoMakie
 using SixelTerm
+using CairoMakie
 scatter(rand(100))
 ```
 
@@ -52,6 +49,4 @@ This package was written by [Tom Short](https://github.com/tshort) and
 is now maintained by [Erik Schnetter](https://github.com/eschnett).
 
 [TerminalGraphics](https://github.com/m-j-w/TerminalGraphics.jl) is another package that
-provides similar functionality. The main difference is that TerminalGraphics includes an
-interface to libsixel, while this package relies on ImageMagick for conversion to the Sixel
-format.
+provides similar functionality.
