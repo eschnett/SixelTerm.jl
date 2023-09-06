@@ -1,32 +1,40 @@
 module SixelTerm
 
 using FileIO
-using ImageMagick
+using ImageIO
 
 struct SixelDisplay <: AbstractDisplay end
 
-function Base.display(d::SixelDisplay, m::MIME{Symbol("image/png")}, x)
-    a = repr("image/png", x)
-    im = ImageMagick.load_(a)
-    io = IOBuffer()
-    s = Stream{format"six"}(io, "t.six")
-    ImageMagick.save(s, im)
-    write(stdout, take!(io))
-    return nothing
+const MIMES = ("image/png", "image/tiff", "image/jpeg")
+const FORMATS = ("PNG", "TIFF", "JPEG")
+
+for (mime, fmt) in zip(MIMES, FORMATS)
+    @eval begin
+        function Base.display(::SixelDisplay, m::MIME{Symbol($mime)}, @nospecialize(x))
+            io = IOBuffer()
+            show(io, m, x)
+            seekstart(io)
+            im = load(Stream{DataFormat{Symbol($fmt)}}(io))
+            save(Stream{format"SIXEL"}(stdout), im)
+            return nothing
+        end
+        Base.displayable(::SixelDisplay, ::MIME{Symbol($mime)}) = true
+    end
 end
 
-function Base.display(d::SixelDisplay, x)
-    if showable("image/png", x)
-        display(d, "image/png", x)
-    else
-        # fall through to the Displays lower in the display stack
-        throw(MethodError(display, "nope"))
+Base.displayable(::SixelDisplay, ::MIME) = false
+
+function Base.display(d::SixelDisplay, @nospecialize(x))
+    for mime in MIMES
+        if showable(mime, x)
+            return display(d, mime, x)
+        end
     end
-    return nothing
+    throw(MethodError(display, (d, x)))
 end
 
 function __init__()
-    Base.Multimedia.pushdisplay(SixelDisplay())
+    pushdisplay(SixelDisplay())
     return nothing
 end
 
