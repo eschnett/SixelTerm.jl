@@ -4,9 +4,10 @@
   CI](https://github.com/eschnett/SixelTerm.jl/workflows/CI/badge.svg)](https://github.com/eschnett/SixelTerm.jl/actions)
 * [![codecov](https://codecov.io/gh/eschnett/SixelTerm.jl/branch/master/graph/badge.svg?token=6JBYLRAD2X)](https://codecov.io/gh/eschnett/SixelTerm.jl)
 
-This is a quick-and-dirty Julia package to display graphics inline on 
-terminals that support [Sixel](https://en.wikipedia.org/wiki/Sixel) graphics. 
-This is like [TerminalExtensions](https://github.com/Keno/TerminalExtensions.jl)
+This is a Julia package to display graphics inline on terminals that
+support [Sixel](https://en.wikipedia.org/wiki/Sixel) graphics. This is
+like
+[TerminalExtensions](https://github.com/Keno/TerminalExtensions.jl)
 but works with more terminals.
 
 The main advantage of this approach is having usable graphics on remote 
@@ -14,6 +15,7 @@ connections without having to mess with X or other remote display
 connections. This works for Julia running on many remote platforms, 
 including the Windows Subsystem for Linux (WSL) and macOS. It works with
 [WSLtty](https://github.com/mintty/wsltty) and [iTerm2](https://iterm2.com).
+It also supports the [tmux](tmux.github.io) terminal multiplexer.
 
 Terminals with Sixel support are available for Windows, Linux, MacOS, and Android. 
 See [here](https://github.com/saitoha/libsixel/blob/master/README.md#terminal-requirements)
