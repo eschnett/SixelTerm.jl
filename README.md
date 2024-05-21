@@ -15,7 +15,8 @@ connections without having to mess with X or other remote display
 connections. This works for Julia running on many remote platforms, 
 including the Windows Subsystem for Linux (WSL) and macOS. It works with
 [WSLtty](https://github.com/mintty/wsltty) and [iTerm2](https://iterm2.com).
-It also supports the [tmux](tmux.github.io) terminal multiplexer.
+It also supports the [tmux](tmux.github.io) terminal multiplexer somewhat
+(images can be displayed, but they disappear when changing to a different window).
 
 Terminals with Sixel support are available for Windows, Linux, MacOS, and Android. 
 See [here](https://github.com/saitoha/libsixel/blob/master/README.md#terminal-requirements)
