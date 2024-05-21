@@ -20,8 +20,6 @@ function istmux()
     term = get(ENV, "TERM", "")
     return startswith(term, "screen") || startswith(term, "tmux")
 end
-tmux_prefix() = istmux() ? "\ePtmux;\e" : ""
-tmux_postfix() = istmux() ? "\e\\" : ""
 
 for (mime, fmt) in zip(MIMES, FORMATS)
     @eval begin
@@ -30,9 +28,17 @@ for (mime, fmt) in zip(MIMES, FORMATS)
             show(io, m, x)
             seekstart(io)
             im = load(Stream{DataFormat{Symbol($fmt)}}(io))
-            write(stdout, tmux_prefix())
-            save(Stream{format"SIXEL"}(stdout), im)
-            write(stdout, tmux_postfix())
+            if !istmux()
+                save(Stream{format"SIXEL"}(stdout), im)
+            else
+                # Convert to a tmux-compatible escape sequence:
+                # Add prefix and postfix, and quote each escape character
+                io2 = IOBuffer()
+                save(Stream{format"SIXEL"}(io2), im)
+                str = String(take!(io2))
+                str = "\ePtmux;" * replace(str, "\e" => "\e\e") * "\a\e\\"
+                write(stdout, str)
+            end
             return nothing
         end
         Base.displayable(::SixelDisplay, ::MIME{Symbol($mime)}) = true
