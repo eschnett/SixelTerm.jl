@@ -46,10 +46,14 @@ scatter(rand(100))
 This is how things look in iTerm2:
 <img src="https://raw.githubusercontent.com/eschnett/SixelTerm.jl/master/demo-makie.png" width=900px></img>
 
+## Similar packages
+
+* [ImageInTerminal.jl](https://github.com/JuliaImages/ImageInTerminal.jl)
+* [KittyTerminalImages.jl](https://github.com/simonschoelly/KittyTerminalImages.jl)
+* [TerminalExtensions.jl](https://github.com/Keno/TerminalExtensions.jl)
+* [TerminalGraphics.jl](https://github.com/m-j-w/TerminalGraphics.jl) (outdated)
+
 ## Acknowledgements
 
 This package was written by [Tom Short](https://github.com/tshort) and
 is now maintained by [Erik Schnetter](https://github.com/eschnett).
-
-[TerminalGraphics](https://github.com/m-j-w/TerminalGraphics.jl) is another package that
-provides similar functionality.
