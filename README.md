@@ -48,6 +48,7 @@ This is how things look in iTerm2:
 
 ## Similar packages
 
+* [ITerm2Images.jl](https://github.com/eschnett/ITerm2Images.jl)
 * [ImageInTerminal.jl](https://github.com/JuliaImages/ImageInTerminal.jl)
 * [KittyTerminalImages.jl](https://github.com/simonschoelly/KittyTerminalImages.jl)
 * [TerminalExtensions.jl](https://github.com/Keno/TerminalExtensions.jl)
